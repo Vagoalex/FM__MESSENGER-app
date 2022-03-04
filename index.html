@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>FRONTEND_MARATHON</title>
+		<meta name="description" content="Messenger app" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+
+		<link rel="stylesheet" href="css/null.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body>
+		<header class="header">MESSENGER APP</header>
+		<div class="main">
+			<!-- section STARTER -->
+			<section class="messenger-starter messenger-wrapper">
+					<div class="wrapper">
+					<div class="starter">
+						<p class="starter__title">Добро пожаловать <br>в приложение <span class="starter__title--name">Vago's Messenger</span>
+						</p>
+
+						<div class="starter-verification">
+							<p class="starter-verification__title">У Вас уже есть аккаунт?</p>
+							<button class="starter-verification__btn starter-btn">Авторизация</button>
+						</div>
+						<div class="starter-authorization">
+							<p class="starter-authorization__title">Вы можете <br>зарегистрироваться тут:</p>
+							<button class="starter-authorization__btn starter-btn">Регистрация</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- section CHAT -->
+			<section class="messenger-chat">
+				<div class="wrapper">
+					<div class="chat-options">
+						<button class="chat-options__settings-btn" type="button">Настройки</button>
+						<button class="chat-options__quit-btn" type="button">Выйти</button>
+					</div>
+					<div class="chat-window">
+						<template id="myMessage">
+							<div class="message message-me">
+								<p class="message__item"><span class="message__sender">Я: </span><span class="message__content"></span></p>
+								<span class="message__time">18:45</span>
+							</div>
+						</template>
+						<template id="interMessage">
+							<div class="message message-interlocutor">
+								<p class="message__content"><span class="message__sender">Cобеседник: </span><span class="message__content"></p>
+								<span class="message__time">18:45</span>
+							</div>
+						</template>
+					</div>
+					<form class="chat-form">
+						<input class="chat-form__input" type="text" placeholder="cообщение.." />
+						<button class="chat-form__btn" type="submit">=></button>
+					</form>
+				</div>
+			</section>
+
+			<!-- section AUTORISATION -->
+			<section class="messenger-authorization messenger-wrapper">
+					<div class="wrapper">
+					<div class="authorization">
+						<div class="authorization-info">
+							<p class="authorization-info__title">Авторизация</p>
+							<button class="authorization-info__close"></button>
+						</div>
+						<form class="authorization-form">
+							<p class="authorization-form__mail">Почта:</p>
+							<input class="authorization-form__input-mail" type="text" placeholder="Введите вашу почту.." />
+							<button class="authorization-form__button" type="submit">Получить код</button>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<!-- section VERIFICATION -->
+			<section class="messenger-verification messenger-wrapper">
+				<div class="wrapper">
+					<div class="verification">
+						<div class="verification-info">
+							<p class="verification-info__title">Подтверждение</p>
+							<button class="verification-info__close"></button>
+						</div>
+						<form class="verification-form">
+							<p class="verification-form__token">Код:</p>
+							<input class="verification-form__input-token" type="text" placeholder="Введите ваш токен.." />
+							<button class="verification-form__button" type="submit">Войти</button>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<!-- section SETTINGS -->
+			<section class="messenger-settings messenger-wrapper">
+				<div class="wrapper">
+					<div class="settings">
+						<div class="settings-info">
+							<p class="settings-info__title">Настройки</p>
+							<button class="settings-info__close"></button>
+						</div>
+						<p class="settings__title">Имя в чате</p>
+						<form class="settings-form">
+							<input class="settings-form__input" type="text" placeholder="Введите имя.." />
+							<button class="settings-form__btn" type="submit">-></button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="footer">VAGO ALEKSANDR (@vagoalex)</footer>
+
+		<script type="module" src="js/view/UI.js"></script>
+		<script type="module" src="js/libs/storage.js"></script>
+		<script type="module" src="js/view/view.js"></script>
+		<script type="module" src="js/libs/helpers.js"></script>
+		<script  type="module" async src="js/libs/authorization.js"></script>
+		<script  type="module" async src="js/libs/verification.js"></script>
+		<script type="module" src="js/app.js"></script>
+	</body>
+</html>

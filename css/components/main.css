@@ -1,0 +1,319 @@
+/* ============HEADER-FOOTER, SCROLL========================================================================== */
+.header,
+.footer {
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+	line-height: 28px;
+	color: #fff;
+	letter-spacing: 1.5px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 10px;
+	background-color: darkslateblue;
+}
+.header {
+	position: fixed;
+	top: 0;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+}
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-thumb {
+	border-width: 1px 1px 1px 2px;
+	border-color: #555;
+	background-color: #777;
+}
+::-webkit-scrollbar-thumb:hover {
+	border-width: 1px 1px 1px 2px;
+	border-color: #555;
+	background-color: rgb(66, 66, 66);
+}
+::-webkit-scrollbar-track {
+	border-width: 0;
+}
+::-webkit-scrollbar-track:hover {
+	border-left: solid 1px #aaa;
+	background-color: #eee;
+}
+
+/* ============MAIN=========================================================================== */
+
+/* ============SECTION STARTER================== */
+.starter {
+	margin: 106px 24px;
+	width: 275px;
+	height: 320px;
+	background: #fff;
+	padding: 14px;
+}
+.starter__title {
+	font-weight: 700;
+}
+.starter__title--name {
+	color: rgb(115, 53, 196);
+}
+.starter-verification {
+	position: relative;
+	height: 110px;
+	border: 1px solid rgb(165, 104, 223);
+	background-color: rgb(244, 221, 255);
+	padding: 20px;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+.starter-verification__title {
+}
+.starter-verification__btn {
+	position: absolute;
+	top: 48px;
+	left: 25px;
+	margin-top: 5px;
+}
+
+.starter-authorization {
+	position: relative;
+	height: 115px;
+	border: 1px solid rgb(165, 104, 223);
+	background-color: rgb(244, 221, 255);
+	padding: 20px;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+.starter-authorization__title {
+}
+.starter-authorization__btn {
+	position: absolute;
+	top: 60px;
+	left: 25px;
+	margin-top: 5px;
+}
+.starter-btn {
+	background-color: #996ee7;
+	color: #fff;
+	border-radius: 18px;
+	padding: 8px 50px;
+}
+.starter-verification__btn:hover,
+.starter-authorization__btn:hover {
+	color: rgb(0, 0, 0);
+	font-weight: 700;
+	padding: 8px 46px;
+}
+.starter-verification__btn:active,
+.starter-authorization__btn:active {
+	transform: translateY(5%);
+	border-top: 3px solid rgb(75, 11, 105);
+	border-right: 3px solid rgb(75, 11, 105);
+}
+/* ============SECTION CHAT================== */
+.messenger-chat {
+	/* НЕ ЗАБУДЬ УБРАТЬ)) */
+	display: none;
+	background: #ffffff;
+	padding: 8px;
+}
+.chat-options {
+	display: flex;
+	justify-content: space-between;
+}
+.chat-options__settings-btn {
+	padding: 7px;
+	border: 1px solid #000000;
+}
+.chat-options__quit-btn {
+	padding: 7px;
+	border: 1px solid #000000;
+}
+.chat-window {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-start;
+	align-items: flex-end;
+	border: 1px solid #000;
+	height: 100%;
+	margin: 8px 0px;
+	padding: 8px;
+	overflow-y: scroll;
+}
+.message {
+	padding: 8px;
+	margin-top: 8px;
+	/* min-width: 30%; */
+	display: flex;
+	align-self: flex-start;
+	flex-direction: column;
+	background-color: #e5e5e5;
+}
+.message-me {
+	align-self: flex-end;
+	text-align: end;
+}
+.message__item {
+}
+.message__sender {
+	font-weight: 700;
+}
+.message__content {
+}
+.message__time {
+	font-size: 14px;
+	font-style: italic;
+	font-weight: 300;
+	align-self: flex-end;
+	color: #333333;
+}
+.message-interlocutor .message__item {
+	padding-right: 20px;
+	text-align: start;
+}
+.chat-form {
+	display: flex;
+	justify-content: space-between;
+}
+.chat-form__input {
+	border: 1px solid #000;
+	width: 265px;
+	padding: 7px;
+}
+.chat-form__btn {
+	border: 1px solid #000;
+	padding: 7px 12px 7px 12px;
+}
+
+/* ============SECTION AUTHORIZATION ACCOUNT================== */
+.authorization {
+	margin: 106px 24px;
+	width: 275px;
+	height: 320px;
+	background: #fff;
+	padding: 14px;
+}
+.authorization-info {
+	display: flex;
+	justify-content: space-between;
+}
+.authorization-info__close {
+	background-image: url('../../assets/svg/btn-close.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 20px;
+	height: 20px;
+}
+.authorization-form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 70px;
+}
+.authorization-form__mail {
+}
+.authorization-form__input-mail {
+	border: 1px solid #000;
+	width: 100%;
+	height: 32px;
+	margin-top: 3px;
+	padding-left: 8px;
+}
+.authorization-form__button {
+	margin-top: 7px;
+	border: 1px solid #000;
+	padding: 8px;
+}
+
+/* ============SECTION VERIFICATION================== */
+.verification {
+	margin: 106px 24px;
+	width: 275px;
+	height: 320px;
+	background: #fff;
+	padding: 14px;
+}
+.verification-info {
+	display: flex;
+	justify-content: space-between;
+}
+.verification-info__close {
+	background-image: url('../../assets/svg/btn-close.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 20px;
+	height: 20px;
+}
+.verification-form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 70px;
+}
+.verification-form__token {
+}
+.verification-form__input-token {
+	border: 1px solid #000;
+	width: 100%;
+	height: 32px;
+	margin-top: 3px;
+	padding-left: 8px;
+}
+.verification-form__button {
+	margin-top: 7px;
+	border: 1px solid #000;
+	padding: 8px;
+}
+/* ============SECTION SETTINGS================== */
+
+.settings {
+	margin: 106px 24px;
+	width: 275px;
+	height: 320px;
+	background: #fff;
+	padding: 14px;
+}
+.settings-info {
+	display: flex;
+	justify-content: space-between;
+}
+.settings-info__close {
+	background-image: url('../../assets/svg/btn-close.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 20px;
+	height: 20px;
+}
+.settings__title {
+	margin-top: 16px;
+	text-align: start;
+}
+.settings-form {
+	margin-top: 8px;
+	display: flex;
+	justify-content: space-between;
+}
+.settings-form__input {
+	border: 1px solid #000;
+	padding-left: 8px;
+	width: 205px;
+	height: 35px;
+}
+.settings-form__btn {
+	border: 1px solid #000;
+	width: 30px;
+	height: 35px;
+}
+
+.messenger-wrapper {
+	display: none;
+	background-color: #535353;
+}
+
+.section--active {
+	display: block;
+}

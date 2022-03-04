@@ -1,0 +1,30 @@
+/* ============BODY STYLES================================================================================================ */
+body {
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+	align-items: center;
+	text-align: center;
+	min-height: 100vh;
+	background: #000000;
+	display: flex;
+	justify-content: center;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 320px;
+	height: 535px;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+/* ============BODY STYLES END================================================================================================ */
