@@ -23,13 +23,13 @@
 						<p class="starter__title">Добро пожаловать <br>в приложение <span class="starter__title--name">Vago's Messenger</span>
 						</p>
 
-						<div class="starter-verification">
-							<p class="starter-verification__title">У Вас уже есть аккаунт?</p>
-							<button class="starter-verification__btn starter-btn">Авторизация</button>
-						</div>
 						<div class="starter-authorization">
-							<p class="starter-authorization__title">Вы можете <br>зарегистрироваться тут:</p>
-							<button class="starter-authorization__btn starter-btn">Регистрация</button>
+							<p class="starter-authorization__title">У Вас уже есть аккаунт?</p>
+							<button class="starter-authorization__btn starter-btn">Авторизация</button>
+						</div>
+						<div class="starter-registration">
+							<p class="starter-registration__title">Вы можете <br>зарегистрироваться тут:</p>
+							<button class="starter-registration__btn starter-btn">Регистрация</button>
 						</div>
 					</div>
 				</div>
@@ -63,35 +63,35 @@
 				</div>
 			</section>
 
-			<!-- section AUTORISATION -->
-			<section class="messenger-authorization messenger-wrapper">
+			<!-- section REGISTRATION -->
+			<section class="messenger-registration messenger-wrapper">
 					<div class="wrapper">
-					<div class="authorization">
-						<div class="authorization-info">
-							<p class="authorization-info__title">Авторизация</p>
-							<button class="authorization-info__close"></button>
+					<div class="registration">
+						<div class="registration-info">
+							<p class="registration-info__title">Авторизация</p>
+							<button class="registration-info__close"></button>
 						</div>
-						<form class="authorization-form">
-							<p class="authorization-form__mail">Почта:</p>
-							<input class="authorization-form__input-mail" type="text" placeholder="Введите вашу почту.." />
-							<button class="authorization-form__button" type="submit">Получить код</button>
+						<form class="registration-form">
+							<p class="registration-form__mail">Почта:</p>
+							<input class="registration-form__input-mail" type="text" placeholder="Введите вашу почту.." />
+							<button class="registration-form__button" type="submit">Получить код</button>
 						</form>
 					</div>
 				</div>
 			</section>
 
-			<!-- section VERIFICATION -->
-			<section class="messenger-verification messenger-wrapper">
+			<!-- section AUTHORIZATION -->
+			<section class="messenger-authorization messenger-wrapper">
 				<div class="wrapper">
-					<div class="verification">
-						<div class="verification-info">
-							<p class="verification-info__title">Подтверждение</p>
-							<button class="verification-info__close"></button>
+					<div class="authorization">
+						<div class="authorization-info">
+							<p class="authorization-info__title">Подтверждение</p>
+							<button class="authorization-info__close"></button>
 						</div>
-						<form class="verification-form">
-							<p class="verification-form__token">Код:</p>
-							<input class="verification-form__input-token" type="text" placeholder="Введите ваш токен.." />
-							<button class="verification-form__button" type="submit">Войти</button>
+						<form class="authorization-form">
+							<p class="authorization-form__token">Код:</p>
+							<input class="authorization-form__input-token" type="text" placeholder="Введите ваш токен.." />
+							<button class="authorization-form__button" type="submit">Войти</button>
 						</form>
 					</div>
 				</div>
@@ -116,12 +116,6 @@
 		</div>
 		<footer class="footer">VAGO ALEKSANDR (@vagoalex)</footer>
 
-		<script type="module" src="js/view/UI.js"></script>
-		<script type="module" src="js/libs/storage.js"></script>
-		<script type="module" src="js/view/view.js"></script>
-		<script type="module" src="js/libs/helpers.js"></script>
-		<script  type="module" async src="js/libs/authorization.js"></script>
-		<script  type="module" async src="js/libs/verification.js"></script>
 		<script type="module" src="js/app.js"></script>
 	</body>
 </html>

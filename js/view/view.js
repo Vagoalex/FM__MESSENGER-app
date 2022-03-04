@@ -1,6 +1,6 @@
 import { UI, TEMPLATES } from './UI.js';
 
-export { createMyMessage, changeOnVerificationSection, changeOnAuthorizationSection };
+export { createMyMessage };
 
 function createMyMessage() {
 	const messageValue = UI.CHAT.CHAT_INPUT.value;
@@ -13,6 +13,3 @@ function createMyMessage() {
 	UI.CHAT.CHAT_WINDOW.prepend(message);
 	UI.CHAT.CHAT_FORM.reset();
 }
-
-function changeOnAuthorizationSection() {}
-function changeOnVerificationSection() {}

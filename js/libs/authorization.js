@@ -1,12 +1,9 @@
-export async function sendRequest(url, body, method = null) {
-	const options = {
-		method: method,
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(body),
-	};
-	const response = await fetch(url, options);
-	const result = await response.json();
-	return result;
-}
+import { UI } from '../view/UI.js';
+export { changeOnAuthorizationSection };
+function changeOnAuthorizationSection() {}
+
+UI.AUTHORIZATION.AUTH_BTN.addEventListener('click', e => {
+	e.preventDefault();
+	const token = UI.AUTHORIZATION.AUTH_INPUT.value;
+	setCookie('authorization-token', token);
+});
