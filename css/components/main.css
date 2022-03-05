@@ -45,6 +45,9 @@
 /* ============MAIN=========================================================================== */
 
 /* ============SECTION STARTER================== */
+.messenger-starter {
+	background-color: #535353;
+}
 .starter {
 	margin: 106px 24px;
 	width: 275px;
@@ -107,14 +110,15 @@
 }
 .starter-authorization__btn:active,
 .starter-registration__btn:active {
+	color: rgb(0, 0, 0);
+	font-weight: 700;
+	padding: 8px 46px;
 	transform: translateY(5%);
 	border-top: 3px solid rgb(75, 11, 105);
 	border-right: 3px solid rgb(75, 11, 105);
 }
 /* ============SECTION CHAT================== */
 .messenger-chat {
-	/* НЕ ЗАБУДЬ УБРАТЬ)) */
-	display: none;
 	background: #ffffff;
 	padding: 8px;
 }
@@ -187,6 +191,9 @@
 }
 
 /* ============SECTION registration ACCOUNT================== */
+.messenger-registration {
+	background-color: #535353;
+}
 .registration {
 	margin: 106px 24px;
 	width: 275px;
@@ -228,6 +235,9 @@
 }
 
 /* ============SECTION authorization================== */
+.messenger-authorization {
+	background-color: #535353;
+}
 .authorization {
 	margin: 106px 24px;
 	width: 275px;
@@ -268,7 +278,9 @@
 	padding: 8px;
 }
 /* ============SECTION SETTINGS================== */
-
+.messenger-settings {
+	background-color: #535353;
+}
 .settings {
 	margin: 106px 24px;
 	width: 275px;
@@ -292,6 +304,10 @@
 	margin-top: 16px;
 	text-align: start;
 }
+.settings__title-name {
+	weight: bold;
+	color: rgb(75, 11, 105);
+}
 .settings-form {
 	margin-top: 8px;
 	display: flex;
@@ -311,7 +327,6 @@
 
 .messenger-wrapper {
 	display: none;
-	background-color: #535353;
 }
 
 .section--active {

@@ -1,4 +1,12 @@
 export const UI = {
+	SECTIONS: {
+		WRAPPERS: document.querySelectorAll('.messenger-wrapper'),
+		STARTER: document.querySelector('.messenger-starter'),
+		CHAT: document.querySelector('.messenger-chat'),
+		REG: document.querySelector('.messenger-registration'),
+		AUTH: document.querySelector('.messenger-authorization'),
+		SETTINGS: document.querySelector('.messenger-settings'),
+	},
 	STARTER: {
 		START_SECTION: document.querySelector('.messenger-starter'),
 		START_AUTH_BTN: document.querySelector('.starter-authorization__btn'),
@@ -6,9 +14,11 @@ export const UI = {
 	},
 	CHAT: {
 		CHAT_WINDOW: document.querySelector('.chat-window'),
+		CHAT_SETTINGS: document.querySelector('.chat-options__settings-btn'),
+		CHAT_QUIT: document.querySelector('.chat-options__quit-btn'),
 		CHAT_FORM: document.querySelector('.chat-form'),
 		CHAT_INPUT: document.querySelector('.chat-form__input'),
-		CHAT_BTN: document.querySelector('.chat-form__btn'),
+		CHAT_SEND: document.querySelector('.chat-form__btn'),
 	},
 	REGISTRATION: {
 		REG_CLOSE: document.querySelector('.registration-info__close'),
@@ -23,6 +33,7 @@ export const UI = {
 		AUTH_BTN: document.querySelector('.authorization-form__button'),
 	},
 	SETTINGS: {
+		SETTINGS_NAME: document.querySelector('.settings__title-name'),
 		SETTINGS_CLOSE: document.querySelector('.settings-info__close'),
 		SETTINGS_FORM: document.querySelector('.settings-form'),
 		SETTINGS_INPUT: document.querySelector('.settings-form__input'),

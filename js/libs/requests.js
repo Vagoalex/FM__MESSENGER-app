@@ -1,42 +1,51 @@
-import { getCookie } from '../libs/storage.js';
-export { setUserName, getRequest, sendRequest };
+import { getCookie } from './storage.js';
+export { userName, sendPOSTRequest, sendGETRequest, setUserName };
 
-async function sendRequest(url, body, method = null) {
-	const options = {
-		method: method,
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(body),
-	};
-	const response = await fetch(url, options);
-	const result = await response.json();
-	return result;
+let userName = '';
+
+async function sendGETRequest(url, token = getCookie('authorization-token')) {
+	try {
+		const response = await fetch(url, {
+			method: 'GET',
+			headers: {
+				Authorization: `Bearer ${token}`,
+				'Content-Type': 'application/json;charset=utf-8',
+			},
+		});
+		return await response.json();
+	} catch (error) {
+		return error;
+	}
 }
 
-async function setUserName(newName) {
-	const token = getCookie('verification-token');
-	const response = await fetch('https://chat1-341409.oa.r.appspot.com/api/user', {
-		method: 'PATCH',
-		headers: {
-			Authorization: `Bearer ${token}`,
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({ name: `${newName}` }),
-	});
-	const result = await response.json();
-	return result;
+async function sendPOSTRequest(url, body) {
+	try {
+		const response = await fetch(url, {
+			method: 'POST',
+			body: JSON.stringify(body),
+			headers: {
+				'Content-Type': 'application/json;charset=utf-8',
+			},
+		});
+		return await response.json();
+	} catch (error) {
+		return error;
+	}
 }
 
-async function getRequest(url) {
-	const token = getCookie('verification-token');
-	const options = {
-		headers: {
-			Authorization: `Bearer ${token}`,
-			'Content-Type': 'application/json',
-		},
-	};
-	const response = await fetch(url, options);
-	const result = await response.json();
-	return result;
+async function setUserName(url, newName, token = getCookie('authorization-token')) {
+	try {
+		const response = await fetch(url, {
+			method: 'PATCH',
+			body: JSON.stringify({ name: `${newName}` }),
+			headers: {
+				Authorization: `Bearer ${token}`,
+				'Content-Type': 'application/json',
+			},
+		});
+		const result = await response.json();
+		return (userName = result.name);
+	} catch (error) {
+		return error;
+	}
 }
