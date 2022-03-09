@@ -31,4 +31,3 @@ export function changeOnAuthorizationSection() {
 	UI.SECTIONS.AUTH.classList.add('section--active');
 }
 
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZhZ29hbGV4NjY2QG1haWwucnUiLCJpYXQiOjE2NDY4Mzc2MDUsImV4cCI6MTY0NzI4NDAwNX0.eZO9-PjCZ9cvqExanl8kwg356PPtEJsf6GcaamWQNPw

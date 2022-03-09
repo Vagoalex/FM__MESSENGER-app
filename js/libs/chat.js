@@ -5,15 +5,14 @@ import { getCookie } from './storage.js';
 import { startApp } from '../app.js';
 import { formatDate } from './helpers.js';
 
-const socket = new WebSocket(`ws://chat1-341409.oa.r.appspot.com/websockets?${getCookie('authorization-token')}`);
-
-const messageList = JSON.parse(localStorage.getItem('messages'));
-let start = -20;
-let end = messageList && messageList.length;
-
 export async function changeOnChatSection() {
 	UI.SECTIONS.WRAPPERS.forEach(item => item.classList.remove('section--active'));
 	UI.SECTIONS.CHAT.classList.add('section--active');
+	try {
+		const socket = new WebSocket(`ws://chat1-341409.oa.r.appspot.com/websockets?${getCookie('authorization-token')}`);
+	} catch (error) {
+		console.log('Error: ' + error.message);
+	}
 
 	historyLoad();
 }
@@ -38,7 +37,8 @@ async function historyLoad() {
 	renderHistory(historyJSON);
 }
 
-async function renderHistory(response, start, end) {
+// TO DO: refactoring loading history and me need to made a scrolling with rendering history.
+async function renderHistory(response) {
 	const historyArray = response.messages;
 	const startArray = historyArray.slice(-30);
 
@@ -101,26 +101,3 @@ async function createMyMessage() {
 	UI.CHAT.CHAT_WINDOW.prepend(message);
 	UI.CHAT.CHAT_FORM.reset();
 }
-
-// async function getMessages(start, end, scrollTrigger = true) {
-// 	const messages = JSON.parse(localStorage.getItem('messages')).slice(start, end).reverse();
-
-// 	await messages.forEach(async function (messageData) {
-// 		const messageItem = await renderMessageItem(messageData);
-// 		await UI.CHAT.messageList.prepend(messageItem);
-// 		if (scrollTrigger) scrollToBottom();
-// 	});
-// }
-
-// function getMessageScrollTop() {
-// 	UI.CHAT.messagesWrapper.addEventListener('scroll', async function (event) {
-// 		if (this.scrollTop === 0) {
-// 			const height = this.scrollHeight;
-// 			start += -20;
-// 			end -= 20;
-// 			await getMessages(start, end, false);
-// 			await this.scrollTo(0, this.scrollHeight - height);
-// 		}
-// 	});
-// }
-// getMessageScrollTop();
