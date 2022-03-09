@@ -39,6 +39,7 @@ export const UI = {
 		SETTINGS_INPUT: document.querySelector('.settings-form__input'),
 		SETTINGS_BTN: document.querySelector('.settings-form__btn'),
 	},
+	API_SERVER_URL: 'https://chat1-341409.oa.r.appspot.com/api/',
 };
 export const TEMPLATES = {
 	myTEMPLATE: {

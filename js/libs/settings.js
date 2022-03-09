@@ -22,8 +22,8 @@ UI.SETTINGS.SETTINGS_BTN.addEventListener('click', e => {
 		UI.SETTINGS.SETTINGS_FORM.reset();
 		changeOnSettingsSection();
 	} else {
-		setUserName('https://chat1-341409.oa.r.appspot.com/api/user', nameValue);
-		sendGETRequest('https://chat1-341409.oa.r.appspot.com/api/user/me');
+		setUserName(`${UI.API_SERVER_URL}user`, nameValue);
+		sendGETRequest(`${UI.API_SERVER_URL}user/me`);
 
 		changeOnChatSection();
 		UI.SETTINGS.SETTINGS_FORM.reset();

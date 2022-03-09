@@ -1,14 +1,13 @@
 import { getCookie } from './storage.js';
-export { userName, sendPOSTRequest, sendGETRequest, setUserName };
+import { UI } from '../view/UI.js';
+export { sendPOSTRequest, sendGETRequest, setUserName, getMyInfo };
 
-let userName = '';
-
-async function sendGETRequest(url, token = getCookie('authorization-token')) {
+async function sendGETRequest(url) {
 	try {
 		const response = await fetch(url, {
 			method: 'GET',
 			headers: {
-				Authorization: `Bearer ${token}`,
+				Authorization: `Bearer ${getCookie('authorization-token')}`,
 				'Content-Type': 'application/json;charset=utf-8',
 			},
 		});
@@ -33,14 +32,14 @@ async function sendPOSTRequest(url, body) {
 	}
 }
 
-async function setUserName(url, newName, token = getCookie('authorization-token')) {
+async function setUserName(url, newName) {
 	try {
 		const response = await fetch(url, {
 			method: 'PATCH',
 			body: JSON.stringify({ name: `${newName}` }),
 			headers: {
-				Authorization: `Bearer ${token}`,
-				'Content-Type': 'application/json',
+				Authorization: `Bearer ${getCookie('authorization-token')}`,
+				'Content-Type': 'application/json;charset=utf-8',
 			},
 		});
 		const result = await response.json();
@@ -48,4 +47,15 @@ async function setUserName(url, newName, token = getCookie('authorization-token'
 	} catch (error) {
 		return error;
 	}
+}
+
+async function getMyInfo() {
+	const response = await sendGETRequest(`${UI.API_SERVER_URL}user/me`);
+	const myData = {
+		name: response.name,
+		email: response.email,
+		token: response.token,
+		id: response._id,
+	};
+	return myData;
 }

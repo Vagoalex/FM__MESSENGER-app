@@ -1,7 +1,6 @@
-import { UI, TEMPLATES } from './view/UI.js';
+import { UI } from './view/UI.js';
 import { changeOnAuthorizationSection } from './libs/authorization.js';
 import { changeOnRegistrationSection } from './libs/registration.js';
-import { setCookie, getCookie, deleteCookie } from './libs/storage.js';
 
 export function startApp() {
 	UI.SECTIONS.WRAPPERS.forEach(item => item.classList.remove('section--active'));

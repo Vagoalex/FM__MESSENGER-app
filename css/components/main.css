@@ -176,6 +176,9 @@
 	padding-right: 20px;
 	text-align: start;
 }
+.message-interlocutor .message__content {
+	align-self: flex-start;
+}
 .chat-form {
 	display: flex;
 	justify-content: space-between;
