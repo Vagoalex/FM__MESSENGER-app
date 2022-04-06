@@ -13,7 +13,8 @@ UI.AUTHORIZATION.AUTH_BTN.addEventListener('click', e => {
 
 	const token = UI.AUTHORIZATION.AUTH_INPUT.value;
 
-	if (token.length >= 165) {
+	// if (token.length >= 165) {
+	if (token.length >= 0) {
 		setCookie('authorization-token', token);
 
 		sendGETRequest(`${UI.API_SERVER_URL}user/me`);
@@ -30,4 +31,3 @@ export function changeOnAuthorizationSection() {
 	UI.SECTIONS.WRAPPERS.forEach(item => item.classList.remove('section--active'));
 	UI.SECTIONS.AUTH.classList.add('section--active');
 }
-
